@@ -1,0 +1,85 @@
+.container {
+  margin-bottom: var(--spacing-xl);
+}
+
+.label {
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-gray-700);
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: 2px solid var(--color-gray-300);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-base);
+  transition: border-color var(--transition-normal);
+  background-color: var(--color-white);
+  font-family: inherit;
+  outline: none;
+  color: var(--color-gray-700);
+}
+
+.inputWithLeftIcon {
+  padding-left: calc(var(--spacing-lg) * 2.5);
+}
+
+.inputWithRightIcon {
+  padding-right: calc(var(--spacing-lg) * 2.5);
+}
+
+.input.focused {
+  border-color: var(--color-primary);
+}
+
+.input.error {
+  border-color: var(--color-error);
+}
+
+.iconContainer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: calc(var(--spacing-lg) * 2.5);
+  z-index: 1;
+}
+
+.inputWrapper .iconContainer:first-child {
+  left: 0;
+}
+
+.inputWrapper .iconContainer:last-child {
+  right: 0;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  color: var(--color-gray-500);
+  transition: color var(--transition-normal);
+}
+
+.focused .icon {
+  color: var(--color-primary);
+}
+
+.error .icon {
+  color: var(--color-error);
+}
+
+.errorMessage {
+  margin-top: var(--spacing-xs);
+  font-size: var(--font-xs);
+  color: var(--color-error);
+}
